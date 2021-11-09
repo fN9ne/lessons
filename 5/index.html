@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/img/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/favicon/favicon.png" sizes="128x128">
+<link rel="icon" href="/img/favicon/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
+<title>Урок №5. CSS. Стили шрифта и текста.</title>
+<link rel="stylesheet" href="/css/null.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+<body>
+	<div class="window">
+<aside class="sidebar">
+	<div class="sidebar__header">
+		<div class="sidebar__button"><span></span></div>
+		<div class="sidebar__title">Навигация</div>
+	</div>
+	<div class="sidebar__body">
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Уроки</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="/5/"><span>Урок 5.</span> Стили шрифта и текста.</a></li>
+			</ul>
+		</div>
+	</div>
+</aside>		<div class="wrapper">
+<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__num">5</div>
+			<h1>CSS. Стили шрифта и текста.</h1>
+		</div>
+	</div>
+</header>			<main class="page">
+				<section>
+					<div class="text">
+						<div class="text__section">
+							<h2>Введение</h2>
+							<p>Стилизация текста, это одно из основных предназначений CSS. Поэтому очень важно владеть соответсвующими умениями, которые мы сегодня изучим.</p>
+						</div>
+						<div class="text__section">
+							<h2>Терминология CSS</h2>
+							<p>Обычно используют селектор класса.</p>
+							<div class="code">
+<pre><code data-language="css">.text {
+	/* code */
+}</code></pre>
+							</div>
+							<p>Селектор типа, он же селектор тега.</p>
+							<div class="code">
+<pre><code data-language="css">div {
+	/* code */
+}</code></pre>
+							</div>
+							<p>Селектор типа (тега) и класса. Такая запись будет иметь больший приоритет.</p>
+							<div class="code">
+<pre><code data-language="css">div.text {
+	/* code */
+}</code></pre>
+							</div>
+							<p>Свойства, значения и параметры. Свойство - это то, что мы пишем до двоеточия. Значение - то, что после. Параметр - это вся запись, свойсвто + значение.</p>
+							<div class="code">
+<pre><code data-language="css">.text {
+	font-size: 24px;
+	background-color: #f1f1f1;
+}</code></pre>
+							</div>
+							<p>В CSS, можно обращаться сразу к нескольким селекторам. Для этого, следует указать их через запятую.</p>
+							<div class="code">
+<pre><code data-language="css">.text, .box {
+	font-size: 24px;
+	background-color: #f1f1f1;
+}</code></pre>
+							</div>
+						</div>
+						<div class="text__section">
+							<h2>Основные свойства для работы с шрифтами и текстами.</h2>
+							<h4>Свойство для установления семейства шрифта.</h4>
+							<p>Первым делом стоит поговорить о свойстве <span>font-family</span>. Оно устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого. По умолчанию используется шрифт <span>Times New Roman</span>. Его мы и увидим добавив любой текст на нашу HTML страницу.</p>
+							<p>Важно, что все свойства шрифта и текста в том числе <span>font-family</span>, наследуются. Поэтому зачастую, шрифт, который используется в дизайне больше всего, прописывается сразу для тега <span>&lt;body&gt;</span>. Таким образом семейство шрифта распространится на все теги страницы.</p>
+							<div class="code">
+<pre><code data-language="css">body {
+	font-family: 'Arial';
+}</code></pre>
+							</div>
+							<p>Но, для некоторых тегов, всё же необходимо дополнительно указать, <span>font-family</span>, со значением <span>inherit</span>. Например это необходимо для тегов форм, таких как: <span>input</span>, <span>button</span>, <span>textarea</span>.</p>
+							<div class="code">
+<pre><code data-language="css">input, button, textarea {
+	font-family: inherit;
+}</code></pre>
+							</div>
+							<p>Значение <span>inherit</span>, применяется для многих свойств. Указав значение <span>inherit</span>, мы говорим селектору наследовать свойство от родителя.</p>
+							<h4>Установление размера шрифта.</h4>
+							<p>Следующее свойство это уже знакомый нам <span>font-size</span>. Определяет размер шрифта элемента.</p>
+							<div class="code">
+<pre><code data-language="css">.fontsize36 {
+	font-size: 36px;
+}</code></pre>
+							</div>
+							<h4>Начертание шрифта.</h4>
+							<p>Двигаемся дальше. <span>font-style</span> определяет начертание шрифта: обычное, курсивное или наклонное.</p>
+							<p>Курсивный текст.</p>
+							<div class="code">
+<pre><code data-language="css">.italic {
+	font-style: italic;
+}</code></pre>
+							</div>
+							<p>Нормальный текст.</p>
+							<div class="code">
+<pre><code data-language="css">.italic {
+	font-style: normal;
+}</code></pre>
+							</div>
+							<p>Наклонный текст. Важно учесть, что наклонный текст и курсив не одно и тоже. Курсив иммитирует рукописный шрифт, когда наклонный образуется путем наклона обычных знаков.</p>
+							<div class="code">
+<pre><code data-language="css">.italic {
+	font-style: oblique;
+}</code></pre>
+							</div>
+							<h4>Насыщенность (жирность) шрифта.</h4>
+							<p>Идём дальше. Свойство <span>font-weight</span> устанавливает насыщенность шрифта.</p>
+							<div class="code">
+<pre><code data-language="css">.fontbold {
+	font-weight: 700;
+}</code></pre>
+							</div>
+							<p>Значения для <span>font-weight</span>, могут быть как буквенные, например <span>bold</span>, что равноценно <span>700</span>. Так и цифровые, например <span>700</span>.</p>
+							<p>Популярные значения свойства <span>font-weight</span>:</p>
+							<ul>
+								<li><span>100</span> - thin</li>
+								<li><span>200</span> - extra-light</li>
+								<li><span>300</span> - light</li>
+								<li><span>400</span> - regular/noraml</li>
+								<li><span>500</span> - medium</li>
+								<li><span>600</span> - semibold</li>
+								<li><span>700</span> - bold</li>
+								<li><span>800</span> - extra-bold</li>
+								<li><span>900</span> - black</li>
+							</ul>
+							<p>От свойств шрифта мы переходим к более разнообразным свойствам оформления текста.</p>
+						</div>
+						<div class="text__section">
+							<h2>Блуэээуэуэ оно же "Более разнообразные свойства оформления текста".</h2>
+							<h4>Цвет текста.</h4>
+							<p>Свойство <span>color</span> определяет цвет текста.</p>
+							<div class="code">
+<pre><code data-language="css">.color-black {
+	color: #000;
+}</code></pre>
+							</div>
+							<h4>Горизонтальное выравнивание текста.</h4>
+							<p>Свойство <span>text-align</span> определяет горизонтальное выравнивание текста.</p>
+							<div class="code">
+<pre><code data-language="css">.text-center {
+	text-align: center;
+}</code></pre>
+							</div>
+							<p>Принимает значения: <span>left</span>, <span>center</span>, <span>right</span>, <span>justify</span>.</p>
+							<h4>Оформление текста.</h4>
+							<p>Свойство <span>text-decoration</span> добавляет оформление текста.</p>
+							<p>Служит для того, чтобы добавить подчёркивание:</p>
+							<div class="code">
+<pre><code data-language="css">span.decoration {
+	text-decoration: underline;
+}</code></pre>
+							</div>
+							<p>Добавить перечёркивание текста:</p>
+							<div class="code">
+<pre><code data-language="css">span.decoration {
+	text-decoration: line-through;
+}</code></pre>
+							</div>
+							<p>Добавить линию над текстом:</p>
+							<div class="code">
+<pre><code data-language="css">span.decoration {
+	text-decoration: overline;
+}</code></pre>
+							</div>
+							<p>Также можно использовать сразу несколько значений, для <span>text-decoration</span>. Для этого следует указать их через пробел:</p>
+							<div class="code">
+<pre><code data-language="css">span.decoration {
+	text-decoration: underline overline;
+}
+span.deocration2 {
+	text-decoration: overline line-through underline;
+}</code></pre>
+							</div>
+							<h4>Тень текста.</h4>
+							<p>Свойство <span>text-shadow</span> добавляет тень к тексту.</p>
+							<p>Синтаксис записи значений, для свойства <span>text-shadow</span> таков:</p>
+							<ol>
+								<li>Сначала записывается смещение тени по горизонтали (лево, право), значение указывается в писелях.</li>
+								<li>Следом записывается смещение тени по вертикали (вверх, вниз), значение также указывается в пикселях.</li>
+								<li>После записывается размытие тени, значение тоже записывается в пикселях.</li>
+								<li>И на последок указывается цвет тени.</li>
+							</ol>
+							<div class="code">
+<pre><code data-language="css">.shadow {
+	text-shadow: 1px 3px 5px #000;
+}</code></pre>
+							</div>
+							<p>В этом примере добавится тень к тексту, которая будет смещена на <span>1px</span> по гозионтали вправо, на <span>3px</span> по вертикали вниз, будет размыта на <span>5px</span> и будет иметь цвет <span>#000</span>, то бишь чёрный.</p>
+							<p>Если мы не хотим смещать тень ни по вертикали, ни по горизонтали, то следует указать значения равные <span>0</span>, например:</p>
+							<div class="code">
+<pre><code data-language="css">.shadow {
+	text-shadow: 0 0 10px #fff;
+}</code></pre>
+							</div>
+							<p>Если мы указыаем положительные значения для смещения текста, то если по горизонтали, текст смещается вправо. Если по вертикали, текст смещается вниз.</p>
+							<p>Но так же для смещения можно указывать и отрицательные значения, соответственно указав, отрицательное значение по горизонтали, текст сместится влево. Если по вертикале, текст сместится вверх.</p>
+							<div class="code">
+<pre><code data-language="css">.shadow {
+	text-shadow: -5px -10px 8px #fff;
+}</code></pre>
+							</div>
+							<p>В приведённом выше случае, тень текста сместится на <span>5px</span> влево, на <span>10px</span> вверх, размытие тени будет составлять <span>8px</span>, а цвет тени будет <span>#ff0000</span> (красный).</p>
+							<p>Размытие тени, можно так же не указывать, в таком случае, тень не будет размытой.</p>
+							<div class="code">
+<pre><code data-language="css">.shadow {
+	text-shadow: 2px -2px 0px rgba(0, 0, 0, .5);
+}</code></pre>
+							</div>
+							<h4>Управление преобразованием текста элемента в заглавные или прописные символы.</h4>
+							<p>Свойство <span>text-transform</span> управляет преобразование текста.</p>
+							<p>Принимает следующие значения: <span>capitalize</span>, <span>lowercase</span>, <span>uppercase</span>.</p>
+							<p>Указав значение <span>capitalize</span> первый символ каждого слова в предложении будет заглавным.</p>
+							<div class="code">
+<pre><code data-language="css">.capitalize {
+	text-transform: capitalize;
+}</code></pre>
+							</div>
+							<p>Указав значение <span>lowercase</span> все символы текста становятся строчными (маленькими).</p>
+							<div class="code">
+<pre><code data-language="css">.lowercase {
+	text-transform: lowercase;
+}</code></pre>
+							</div>
+							<p>Указав значение <span>uppercase</span> все символы текста становятся прописными (большими).</p>
+							<div class="code">
+<pre><code data-language="css">.uppercase {
+	text-transform: uppercase;
+}</code></pre>
+							</div>
+							<h4>Отступ первой строки.</h4>
+							<p>Свойство <span>text-indent</span>, позволяет указать отступ первой строки, что позволяет сделать красную строку.</p>
+							<div class="code">
+<pre><code data-language="css">.indent {
+	text-indent: 50px;
+}</code></pre>
+							</div>
+							<h4>Интервал между символами.</h4>
+							<p>Свойство <span>letter-spacing</span> определяет интверал между символами.</p>
+							<div class="code">
+<pre><code data-language="css">.letter-space {
+	letter-spacing: 5px;
+}</code></pre>
+							</div>
+							<h4>Интервал между словами.</h4>
+							<p>Свойство <span>word-spacing</span> определяет интервал между словами.</p>
+							<div class="code">
+<pre><code data-language="css">.word-space {
+	word-spacing: 10px;
+}</code></pre>
+							</div>
+							<h4>Управление проблеами между словами.</h4>
+							<p>Свойство <span>white-space</span> позволяет управлять проблеами между словами.</p>
+							<p>Принимает два значения: <span>nowrap</span> и <span>normal</span>. Значение <span>normal</span> является значением по умолчанию.</p>
+							<p>Указав значение <span>nowrap</span> будет запрещён перенос строки. Таким образом текст отображается в одну строку.</p>
+							<div class="code">
+<pre><code data-language="css">.nowrap {
+	white-space: nowrap;
+}</code></pre>
+							</div>
+							<h4>Межстрочный интервал.</h4>
+							<p>Свойство <span>line-height</span> позволяет установить межстрочный интервал текста.</p>
+							<p>Значение можно указывать как в пикселях, так и просто в цифрах.</p>
+							<div class="code">
+<pre><code data-language="css">.lineheight {
+	line-height: 20px;
+}</code></pre>
+							</div>
+							<p>Если указать значение "просто в цифрах", то межстрочный интервал примет высоту относительно размера шрифта.</p>
+							<div class="code">
+<pre><code data-language="css">.lineheight {
+	line-height: 2;
+}</code></pre>
+							</div>
+						</div>
+				</section>
+			</main>
+		</div>
+	</div>
+<script src="/js/rainbow.min.js"></script>
+<script src="/js/script.js"></script></body>
+</html>
