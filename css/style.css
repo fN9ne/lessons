@@ -236,6 +236,7 @@ body {
 	opacity: 0.6;
 	margin: 0 0 15px 0;
 	line-height: 1.5;
+	max-width: 600px;
 }
 .text ul, .text ol {
 	color: #f8f8f8;
@@ -280,7 +281,7 @@ body {
 }
 .code pre {
 	border-radius: 5px;
-	min-width: 650px;
+	min-width: 600px;
 	background: #1B2B34;
 	padding: 20px;
 	position: relative;
