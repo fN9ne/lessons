@@ -217,7 +217,7 @@ body {
 	background: #2d2f3e;
 }
 .text h2 {
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
 	margin: 0 0 25px 0;
 	color: #f8f8f8;
@@ -236,7 +236,7 @@ body {
 	opacity: 0.6;
 	margin: 0 0 15px 0;
 	line-height: 1.5;
-	max-width: 600px;
+	max-width: 750px;
 }
 .text ul, .text ol {
 	color: #f8f8f8;
@@ -301,6 +301,9 @@ body {
 }
 .code .comment {
 	color: #65737E;
+}
+.code .pseudo {
+	color: #C594C5;
 }
 .code .class, .code .numeric, .code .unit {
 	color: #F99157;

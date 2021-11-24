@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../img/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../img/favicon/favicon.png" sizes="128x128">
+<link rel="icon" href="../img/favicon/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
+<title>Урок №6. CSS. Свойства блоков.</title>
+<link rel="stylesheet" href="../css/null.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+<body>
+	<div class="window">
+<aside class="sidebar">
+	<div class="sidebar__header">
+		<div class="sidebar__button"><span></span></div>
+		<div class="sidebar__title">Навигация</div>
+	</div>
+	<div class="sidebar__body">
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Уроки</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста.</a></li>
+				<li class="sidebar-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков.</a></li>
+			</ul>
+		</div>
+	</div>
+</aside>		<div class="wrapper">
+<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__box">
+				<div class="header__num">6</div>
+				<h1>Свойства блоков.</h1>
+			</div>
+			<div class="header__button"><span></span></div>
+			<div class="header-menu">
+				<div class="header-menu__head">
+					<div class="header-menu__title">Навигация</div>
+				</div>
+				<div class="header-menu__body">
+					<div class="header-menu-category">
+						<div class="header-menu-category__head">Уроки</div>
+						<ul class="header-menu-category__list">
+							<li class="header-menu-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста.</a></li>
+							<li class="header-menu-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>			<!-- h2, h4, p, rbcodecss, p span, -->
+			<main class="page">
+				<section>
+					<div class="text">
+						<div class="text__section">
+							<h2>Введение.</h2>
+							<p>Сегодня мы поговорим о свойствах блоков, отступах, размерах и характеристиках.</p>
+						</div>
+						<div class="text__section">
+							<h2>Приступим.</h2>
+							<h4>Внутренний отступ блочных тегов.</h4>
+							<p>Первым свойством, о котором мы сегодня поговорим будет свойство <span>padding</span>, которое позволяет установить внутренний отступ для <span>блочных тегов</span>.</p>
+							<p>Не спроста я сакцентировал внимание на том, что свойство применяется для блочных тегов. Так как данное свойство нельзя применять к строчным тегам.</p>
+							<p>Синтаксис записи для этого свойства таков: сначала записываем отступ от верхнего, потом для правого, затем для нижнего и левого краёв (по часовой стрелке). Например:</p>
+<div class="code"><pre><code data-language="css">div {
+   padding: 10px 20px 35px 15px;
+}		
+</code></pre></div>
+							<p>В данной записи <span>&lt;div&gt;</span>, будет иметь отступ сверху <span>10px</span>, справа <span>20px</span>, снизу <span>35px</span>, слева <span>15px</span>.</p>
+							<p>Данный вариант записи используется чаще всего, но есть и другие.</p>
+							<p>Указав три значения, например:</p>
+<div class="code"><pre><code data-language="css">div {
+  padding: 20px 30px 15px;
+}
+</code></pre></div>
+							<p>Тег <span>&lt;div&gt;</span>, будет иметь отступ сверху <span>20px</span>, справа и слева <span>30px</span>, снизу <span>15px</span>.</p>
+							<p>Указав два значения, например:</p>
+<div class="code"><pre><code data-language="css">div {
+   padding: 15px 20px;
+}
+</code></pre></div>
+							<p>Тег <span>&lt;div&gt;</span>, будет имеет отсутп сверху и снизу <span>15px</span>, справа и слева <span>20px</span>.</p>
+							<p>Указав одно значение, например:</p>
+<div class="code"><pre><code data-language="css">div {
+   padding: 50px;
+}
+</code></pre></div>
+							<p>Тег <span>&lt;div&gt;</span>, имеет отступы со свех сторон <span>50px</span>.</p>
+							<p>Важно подметить, что у свойства <span>padding</span> НЕ может быть отрицательных значенией (со знаком минус).</p>
+							<p>Следующая запись будет являться НЕ верной:</p>
+<div class="code"><pre><code data-language="css">div {
+   padding: -20px -15px;
+}
+</code></pre></div>
+							<h4>Внешний отступ блочных тегов.</h4>
+							<p>За внешние отступы <span>блочных тегов</span>, отвечает свойство <span>margin</span>.</p>
+							<p>Синтаксис записи для этого свойства абсолютно идентичен, синтаксису записи свойства <span>padding</span>.</p>
+<div class="code"><pre><code data-language="css">div {
+   margin: 30px 15px;
+}
+</code></pre></div>
+							<p>Отличительной чертой, этого свойства явлется возможность использования отрицательный значений.</p>
+<div class="code"><pre><code data-language="css">div {
+   margin: 30px 24px 55px -40px;
+}
+</code></pre></div>
+						</div>
+						<div class="text__section">
+							<h2>Ширина элементов.</h2>
+							<h4>Свойство управляющее шириной элемента</h4>
+							<p>Чтобы установить <span>конкретную</span> ширину для <span>блочного тега</span>, существует свойство <span>width</span>.</p>
+							<p>Но данное свойсто так же можно применить и к некоторым строчным тегам, например: <span>&lt;img&gt;</span>.</p>
+<div class="code"><pre><code data-language="css">div {
+   width: 430px;
+}
+</code></pre></div>
+							<p>Так же можно указывать значение в процентах <span>%</span>. В таком случае элемент будет принимать ширину в зависимости от ширины родительского элемента.</p>
+<div class="code"><pre><code data-language="css">img {
+   width: 50%;
+}
+</code></pre></div>
+							<h4>Ограничение максимальной ширины элемента</h4>
+							<p>Свойство <span>max-width</span>, устанавливает максимальную ширину блочного тега.</p>
+							<p>Указав это свойство мы запретим элементу становиться шире заданного значения, но позволим уменьшаться.</p>
+							<p>Важно упомянуть, что <span>max-width</span>, лишь ограничавает ширину элемента, а не задаёт конкретно, как <span>width</span>.</p>
+<div class="code"><pre><code data-language="css">div {
+   max-width: 500px;
+}
+</code></pre></div>
+							<h4>Минимальная ширина элемента</h4>
+							<p>Противоположным предыдущему свойству, выступает свойство <span>min-width</span>, которое устанавливает минимальную ширину блочных тегов.</p>
+							<p>Указав это свойство мы разрешим элементу становиться шире, но запретим становиться меньше указанного значения.</p>
+<div class="code"><pre><code data-language="css">div {
+   min-width: 300px;
+}
+</code></pre></div>
+						</div>
+						<div class="text__section">
+							<h2>Высота элементов.</h2>
+							<h4>Свойство определяющее высоту элемента</h4>
+							<p>Для установления высоты элемента, стоит использовать свойство <span>height</span>.</p>
+<div class="code"><pre><code data-language="css">div {
+   height: 200px;
+}
+</code></pre></div>
+							<p>Так же как и с шириной, у высоты присутстуют свойства для её ограничения, рассмотрим их.</p>
+							<h4>Максимальная высота элемента</h4>
+							<p>Для того, чтобы задать максимальную высоту для элемента следует использовать свойство <span>max-height</span>.</p>
+<div class="code"><pre><code data-language="css">div {
+   max-height: 200px;
+}
+</code></pre></div>
+							<h4>Минимальная высота элемента</h4>
+							<p>Аналогичное предыдущему свойству, свойство <span>min-height</span>, задающее минимальное значение высоты.</p>
+<div class="code"><pre><code data-language="css">div {
+   min-height: 100px;
+}
+</code></pre></div>
+						</div>
+						<div class="text__section">
+							<h2>Примечание.</h2>
+							<p>В обнулящем стиле указано свойство <span>box-sizing</span>, со значением <span>border-box</span>.</p>
+<div class="code"><pre><code data-language="css">*, *:before, *:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+</code></pre></div>
+							<p>Необходимо оно для изменения алгоритмов расчёта ширины <span>width</span> и высоты <span>height</span> элементов. Это свойство наследуется и указано, для всех элементов страницы.</p>
+							<p>Значение <span>border-box</span>, свойства <span>box-sizing</span>, меняет стандартный расчёт ширины и высоты элемента на более удобный. По умолчанию <span>width</span> и <span>height</span>, задают ширину и высоту контента, не включая в себя значения отступов полей (<span>padding</span> и <span>margin</span>) и границ.</p>
+							<p>Со значением <span>border-box</span>, <span>width</span> и <span>height</span>, включают в себя значение отступов полей и границ, НО не внешних отступов <span>margin</span>.</p>
+						</div>
+						<div class="text__section">
+							<h2>Следующие свойства блоков.</h2>
+							<h4>Отображение содержания элемента.</h4>
+							<p>Свойство <span>overflow</span>, управляет отображением содержимого элемента. Значением по умолчанию является <span>visible</span>. Это означает, что содержимое за границами элемента будет показываться.</p>
+<div class="code"><pre><code data-language="css">div {
+   overflow: visible;
+}
+</code></pre></div>
+							<p>Указав значение <span>hidden</span>, содержимое за границами элемента будет скрыто.</p>
+<div class="code"><pre><code data-language="css">div {
+   overflow: hidden;
+}
+</code></pre></div>
+							<p>Следующее значение <span>scroll</span>, принудительно добавляет горизонтальную и вертикальную полосы прокрутки для элемента, даже если они не нужны.</p>
+<div class="code"><pre><code data-language="css">div {
+   overflow: scroll;
+}
+</code></pre></div>
+							<p>И последнее значение <span>auto</span>, добавляет полосы прокрутки в том случае, если они нужны.</p>
+<div class="code"><pre><code data-language="css">div {
+   overflow: auto;
+}
+</code></pre></div>
+							<h4>Свойство, определяющее то, как элемент будет показан на странице.</h4>
+							<p>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. Это последнее на сегодня свойство, свойство <span>display</span>.</p>
+							<p>Указав свойство <span>display</span>, со значением <span>block</span>, мы заставим элемент показываться, как блочный. Блок начнёт занимать всю ширину пространства, на него начинают действовать все свойства, применимые к блочным тегам.</p>
+							<p>Таким образом мы можем например: сделать строчный тег, такой как <span>&lt;span&gt;</span>, блочным.</p>
+<div class="code"><pre><code data-language="css">span {
+   display: block;
+}
+</code></pre></div>
+							<p>Следующее значение - <span>inline</span>, делает элемент строчным тегом. Элемент начианет занимать ширину в зависимости от контента, элемент выстаривает в строку и на него перестают действовать свойства блочным тегов.</p>
+							<p>Опять же, таким образом мы можем например: сделать из блочного тега, такого как <span>&lt;div&gt;</span>, строчный.</p>
+<div class="code"><pre><code data-language="css">div {
+   display: inline;
+}
+</code></pre></div>
+							<p>Следующее значение ещё интересней. Это свойство - <span>inline-block</span>, элемент остаётся строчным, занимает ширину равную контенту, так же выстраивается в строку, но на него начинают действовать свойства блочных тегов.</p>
+<div class="code"><pre><code data-language="css">span {
+   display: inline-block;
+}
+</code></pre></div>
+							<p>И последнее значение для свойства <span>display</span>, это значение <span>none</span>. Удаляет элемент из документа, занимаемое им место не резервируется и страница формируется так, словно элемента и не было.</p>
+<div class="code"><pre><code data-language="css">span {
+   display: none;
+}
+</code></pre></div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+<script src="../js/rainbow.min.js"></script>
+<script src="../js/script.js"></script></body>
+</html>
