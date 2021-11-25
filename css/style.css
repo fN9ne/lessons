@@ -178,6 +178,11 @@ body {
 	font-weight: 700;
 	font-size: 18px;
 }
+.end {
+	max-width: 900px;
+	width: 100%;
+	border-radius: 15px;
+}
 .header h1 {
 	color: #f8f8f8;
 	font-weight: 800;
@@ -239,6 +244,7 @@ body {
 	max-width: 750px;
 }
 .text ul, .text ol {
+	max-width: 750px;
 	color: #f8f8f8;
 	font-size: 16px;
 	opacity: 0.6;
@@ -375,6 +381,87 @@ body {
 .header-menu-category__item a span {
 	font-weight: 500;
 }
+.page section {
+	position: relative;
+}
+h2.current, h4.current {
+	color: red;
+	transition: 2s;
+}
+.page-nav {
+	position: fixed;
+	right: 100px;
+	top: 55%;
+	transform: translate(0, -50%);
+	text-align: right;
+}
+.page-nav__list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.page-nav__item {
+	padding: 0 0 8px 0;
+	margin: 0 0 7px 0;
+	position: relative;
+}
+.page-nav__item:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	height: 1px;
+	background: #0177FB;
+}
+.page-nav__item:last-child {
+	margin: 0;
+}
+.page-nav__item:last-child:before {
+	display: none;
+}
+.page-nav__link {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: calc(20/16);
+	color: #f8f8f8;
+	transition: 0.34s;
+	margin: 0 0 7px 0;
+	display: inline-block;
+	opacity: 0.6;
+}
+.page-nav__link:last-child {
+	margin: 0;
+}
+.page-nav__link:hover {
+	padding: 0 5px 0 0;
+}
+.page-nav__link.active {
+	opacity: 1;
+	font-weight: 800;
+}
+.page-nav-inner {}
+.page-nav-inner__list {}
+.page-nav-inner__item {
+	margin: 0 0 7px 0;
+}
+.page-nav-inner__item:last-child {
+	margin: 0;
+}
+.page-nav-inner__link {
+	font-size: 14px;
+	line-height: calc(18/14);
+	color: #f8f8f8;
+	opacity: 0.4;
+	transition: 0.34s;
+}
+.page-nav-inner__link.active {
+	opacity: 1;
+	font-weight: 500;
+}
+.page-nav-inner__link:hover {
+	padding: 0 5px 0 0;
+}
 @keyframes fadeIn {
 	30% {
 		opacity: 0;
@@ -386,6 +473,27 @@ body {
 @media (max-width: 1920px){
 	.window {
 		border-radius: calc(15px + 10 * ((100vw - 768px) / (1920 - 768)));
+	}
+}
+@media (max-width: 1440px){
+	.page-nav__link {
+		font-size: 14px;
+		margin: 0 0 4px 0;
+	}
+	.page-nav__item {
+		padding: 0 0 6px 0;
+		margin: 0 0 5px 0;
+	}
+	.page-nav-inner__item {
+		margin: 0 0 4px 0
+	}
+	.page-nav-inner__link {
+		font-size: 12px
+	}
+}
+@media (max-width: 1360px){
+	.page-nav {
+		display: none
 	}
 }
 @media (max-width: 1280px) {

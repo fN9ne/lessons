@@ -55,14 +55,82 @@
 </header>			<!-- h2, h4, p, rbcodecss, p span, -->
 			<main class="page">
 				<section>
+					<aside class="page-nav">
+						<ul class="page-nav__list">
+							<li class="page-nav__item">
+								<a href="#index1" class="page-nav__link active">Введение</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index2" class="page-nav__link">Отступы</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index3" class="page-nav-inner__link">Внутренние отступы (padding)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index4" class="page-nav-inner__link">Внешние отступы (margin)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index5" class="page-nav__link">Ширина</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index6" class="page-nav-inner__link">Управление шириной (width)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index7" class="page-nav-inner__link">Максимальная ширина (max-width)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index8" class="page-nav-inner__link">Минимальная ширина (min-width)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index9" class="page-nav__link">Высота</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index10" class="page-nav-inner__link">Управление высотой (height)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index11" class="page-nav-inner__link">Максимальная высота (max-height)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index12" class="page-nav-inner__link">Минимальная высота (min-height)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index13" class="page-nav__link">Примечание</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index14" class="page-nav__link">Свойства блоков</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index15" class="page-nav-inner__link">Отображение содержимого (overflow)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index16" class="page-nav-inner__link">Показ элемента на странице (display)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</aside>
 					<div class="text">
 						<div class="text__section">
-							<h2>Введение.</h2>
+							<h2 id="index1">Введение.</h2>
 							<p>Сегодня мы поговорим о свойствах блоков, отступах, размерах и характеристиках.</p>
 						</div>
 						<div class="text__section">
-							<h2>Приступим.</h2>
-							<h4>Внутренний отступ блочных тегов.</h4>
+							<h2 id="index2">Отступы.</h2>
+							<h4 id="index3">Внутренний отступ блочных тегов.</h4>
 							<p>Первым свойством, о котором мы сегодня поговорим будет свойство <span>padding</span>, которое позволяет установить внутренний отступ для <span>блочных тегов</span>.</p>
 							<p>Не спроста я сакцентировал внимание на том, что свойство применяется для блочных тегов. Так как данное свойство нельзя применять к строчным тегам.</p>
 							<p>Синтаксис записи для этого свойства таков: сначала записываем отступ от верхнего, потом для правого, затем для нижнего и левого краёв (по часовой стрелке). Например:</p>
@@ -96,7 +164,7 @@
    padding: -20px -15px;
 }
 </code></pre></div>
-							<h4>Внешний отступ блочных тегов.</h4>
+							<h4 id="index4">Внешний отступ блочных тегов.</h4>
 							<p>За внешние отступы <span>блочных тегов</span>, отвечает свойство <span>margin</span>.</p>
 							<p>Синтаксис записи для этого свойства абсолютно идентичен, синтаксису записи свойства <span>padding</span>.</p>
 <div class="code"><pre><code data-language="css">div {
@@ -110,8 +178,8 @@
 </code></pre></div>
 						</div>
 						<div class="text__section">
-							<h2>Ширина элементов.</h2>
-							<h4>Свойство управляющее шириной элемента</h4>
+							<h2 id="index5">Ширина элементов.</h2>
+							<h4 id="index6">Свойство управляющее шириной элемента</h4>
 							<p>Чтобы установить <span>конкретную</span> ширину для <span>блочного тега</span>, существует свойство <span>width</span>.</p>
 							<p>Но данное свойсто так же можно применить и к некоторым строчным тегам, например: <span>&lt;img&gt;</span>.</p>
 <div class="code"><pre><code data-language="css">div {
@@ -123,7 +191,7 @@
    width: 50%;
 }
 </code></pre></div>
-							<h4>Ограничение максимальной ширины элемента</h4>
+							<h4 id="index7">Ограничение максимальной ширины элемента</h4>
 							<p>Свойство <span>max-width</span>, устанавливает максимальную ширину блочного тега.</p>
 							<p>Указав это свойство мы запретим элементу становиться шире заданного значения, но позволим уменьшаться.</p>
 							<p>Важно упомянуть, что <span>max-width</span>, лишь ограничавает ширину элемента, а не задаёт конкретно, как <span>width</span>.</p>
@@ -131,7 +199,7 @@
    max-width: 500px;
 }
 </code></pre></div>
-							<h4>Минимальная ширина элемента</h4>
+							<h4 id="index8">Минимальная ширина элемента</h4>
 							<p>Противоположным предыдущему свойству, выступает свойство <span>min-width</span>, которое устанавливает минимальную ширину блочных тегов.</p>
 							<p>Указав это свойство мы разрешим элементу становиться шире, но запретим становиться меньше указанного значения.</p>
 <div class="code"><pre><code data-language="css">div {
@@ -140,21 +208,21 @@
 </code></pre></div>
 						</div>
 						<div class="text__section">
-							<h2>Высота элементов.</h2>
-							<h4>Свойство определяющее высоту элемента</h4>
+							<h2 id="index9">Высота элементов.</h2>
+							<h4 id="index10">Свойство определяющее высоту элемента</h4>
 							<p>Для установления высоты элемента, стоит использовать свойство <span>height</span>.</p>
 <div class="code"><pre><code data-language="css">div {
    height: 200px;
 }
 </code></pre></div>
 							<p>Так же как и с шириной, у высоты присутстуют свойства для её ограничения, рассмотрим их.</p>
-							<h4>Максимальная высота элемента</h4>
+							<h4 id="index11">Максимальная высота элемента</h4>
 							<p>Для того, чтобы задать максимальную высоту для элемента следует использовать свойство <span>max-height</span>.</p>
 <div class="code"><pre><code data-language="css">div {
    max-height: 200px;
 }
 </code></pre></div>
-							<h4>Минимальная высота элемента</h4>
+							<h4 id="index12">Минимальная высота элемента</h4>
 							<p>Аналогичное предыдущему свойству, свойство <span>min-height</span>, задающее минимальное значение высоты.</p>
 <div class="code"><pre><code data-language="css">div {
    min-height: 100px;
@@ -162,7 +230,7 @@
 </code></pre></div>
 						</div>
 						<div class="text__section">
-							<h2>Примечание.</h2>
+							<h2 id="index13">Примечание.</h2>
 							<p>В обнулящем стиле указано свойство <span>box-sizing</span>, со значением <span>border-box</span>.</p>
 <div class="code"><pre><code data-language="css">*, *:before, *:after {
    -moz-box-sizing: border-box;
@@ -175,8 +243,8 @@
 							<p>Со значением <span>border-box</span>, <span>width</span> и <span>height</span>, включают в себя значение отступов полей и границ, НО не внешних отступов <span>margin</span>.</p>
 						</div>
 						<div class="text__section">
-							<h2>Следующие свойства блоков.</h2>
-							<h4>Отображение содержания элемента.</h4>
+							<h2 id="index14">Следующие свойства блоков.</h2>
+							<h4 id="index15">Отображение содержания элемента.</h4>
 							<p>Свойство <span>overflow</span>, управляет отображением содержимого элемента. Значением по умолчанию является <span>visible</span>. Это означает, что содержимое за границами элемента будет показываться.</p>
 <div class="code"><pre><code data-language="css">div {
    overflow: visible;
@@ -197,7 +265,7 @@
    overflow: auto;
 }
 </code></pre></div>
-							<h4>Свойство, определяющее то, как элемент будет показан на странице.</h4>
+							<h4 id="index16">Свойство, определяющее то, как элемент будет показан на странице.</h4>
 							<p>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. Это последнее на сегодня свойство, свойство <span>display</span>.</p>
 							<p>Указав свойство <span>display</span>, со значением <span>block</span>, мы заставим элемент показываться, как блочный. Блок начнёт занимать всю ширину пространства, на него начинают действовать все свойства, применимые к блочным тегам.</p>
 							<p>Таким образом мы можем например: сделать строчный тег, такой как <span>&lt;span&gt;</span>, блочным.</p>
@@ -222,6 +290,7 @@
 }
 </code></pre></div>
 						</div>
+						<img src="../img/end2.jpg" class="end">
 					</div>
 				</section>
 			</main>

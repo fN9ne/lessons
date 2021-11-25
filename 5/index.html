@@ -54,13 +54,79 @@
 	</div>
 </header>			<main class="page">
 				<section>
+					<aside class="page-nav">
+						<ul class="page-nav__list">
+							<li class="page-nav__item">
+								<a href="#index1" class="page-nav__link active">Введение</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index2" class="page-nav__link">Терминология</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index3" class="page-nav__link">Свойства шрифтов и текстов</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index4" class="page-nav-inner__link">Семейство шрифта (font-family)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index5" class="page-nav-inner__link">Размер шрифта (font-size)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index6" class="page-nav-inner__link">Начертание шрифта (font-style)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index7" class="page-nav-inner__link">Жирность шрифта (font-weight)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index8" class="page-nav__link">Форматирование текста</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index9" class="page-nav-inner__link">Цвет текста (color)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index10" class="page-nav-inner__link">Выравнивание текста (text-align)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index11" class="page-nav-inner__link">Оформление текста (text-decoration)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index12" class="page-nav-inner__link">Тень текста (text-shadow)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index13" class="page-nav-inner__link">Преобразование текста (text-transform)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index14" class="page-nav-inner__link">Отступ (text-indent)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index15" class="page-nav-inner__link">Межсимвольный интервал (letter-spacing)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index16" class="page-nav-inner__link">Межсловный интервал (word-spacing)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index17" class="page-nav-inner__link">Управление пробелами (white-space)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index18" class="page-nav-inner__link">Межстрочный интервал (line-height)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</aside>
 					<div class="text">
 						<div class="text__section">
-							<h2>Введение</h2>
+							<h2 id="index1">Введение.</h2>
 							<p>Стилизация текста, это одно из основных предназначений CSS. Поэтому очень важно владеть соответсвующими умениями, которые мы сегодня изучим.</p>
 						</div>
 						<div class="text__section">
-							<h2>Терминология CSS</h2>
+							<h2 id="index2">Терминология CSS.</h2>
 							<p>Обычно используют селектор класса.</p>
 							<div class="code">
 <pre><code data-language="css">.text {
@@ -95,8 +161,8 @@
 							</div>
 						</div>
 						<div class="text__section">
-							<h2>Основные свойства для работы с шрифтами и текстами.</h2>
-							<h4>Свойство для установления семейства шрифта.</h4>
+							<h2 id="index3">Основные свойства для работы с шрифтами и текстами.</h2>
+							<h4 id="index4">Свойство для установления семейства шрифта.</h4>
 							<p>Первым делом стоит поговорить о свойстве <span>font-family</span>. Оно устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого. По умолчанию используется шрифт <span>Times New Roman</span>. Его мы и увидим добавив любой текст на нашу HTML страницу.</p>
 							<p>Важно, что все свойства шрифта и текста в том числе <span>font-family</span>, наследуются. Поэтому зачастую, шрифт, который используется в дизайне больше всего, прописывается сразу для тега <span>&lt;body&gt;</span>. Таким образом семейство шрифта распространится на все теги страницы.</p>
 							<div class="code">
@@ -111,14 +177,14 @@
 }</code></pre>
 							</div>
 							<p>Значение <span>inherit</span>, применяется для многих свойств. Указав значение <span>inherit</span>, мы говорим селектору наследовать свойство от родителя.</p>
-							<h4>Установление размера шрифта.</h4>
+							<h4 id="index5">Установление размера шрифта.</h4>
 							<p>Следующее свойство это уже знакомый нам <span>font-size</span>. Определяет размер шрифта элемента.</p>
 							<div class="code">
 <pre><code data-language="css">.fontsize36 {
    font-size: 36px;
 }</code></pre>
 							</div>
-							<h4>Начертание шрифта.</h4>
+							<h4 id="index6">Начертание шрифта.</h4>
 							<p>Двигаемся дальше. <span>font-style</span> определяет начертание шрифта: обычное, курсивное или наклонное.</p>
 							<p>Курсивный текст.</p>
 							<div class="code">
@@ -138,7 +204,7 @@
    font-style: oblique;
 }</code></pre>
 							</div>
-							<h4>Насыщенность (жирность) шрифта.</h4>
+							<h4 id="index7">Насыщенность (жирность) шрифта.</h4>
 							<p>Идём дальше. Свойство <span>font-weight</span> устанавливает насыщенность шрифта.</p>
 							<div class="code">
 <pre><code data-language="css">.fontbold {
@@ -161,15 +227,15 @@
 							<p>От свойств шрифта мы переходим к более разнообразным свойствам оформления текста.</p>
 						</div>
 						<div class="text__section">
-							<h2>Блуэээуэуэ оно же "Более разнообразные свойства оформления текста".</h2>
-							<h4>Цвет текста.</h4>
+							<h2 id="index8">Блуэээуэуэ оно же "Более разнообразные свойства оформления текста".</h2>
+							<h4 id="index9">Цвет текста.</h4>
 							<p>Свойство <span>color</span> определяет цвет текста.</p>
 							<div class="code">
 <pre><code data-language="css">.color-black {
    color: #000;
 }</code></pre>
 							</div>
-							<h4>Горизонтальное выравнивание текста.</h4>
+							<h4 id="index10">Горизонтальное выравнивание текста.</h4>
 							<p>Свойство <span>text-align</span> определяет горизонтальное выравнивание текста.</p>
 							<div class="code">
 <pre><code data-language="css">.text-center {
@@ -177,7 +243,7 @@
 }</code></pre>
 							</div>
 							<p>Принимает значения: <span>left</span>, <span>center</span>, <span>right</span>, <span>justify</span>.</p>
-							<h4>Оформление текста.</h4>
+							<h4 id="index11">Оформление текста.</h4>
 							<p>Свойство <span>text-decoration</span> добавляет оформление текста.</p>
 							<p>Служит для того, чтобы добавить подчёркивание:</p>
 							<div class="code">
@@ -206,7 +272,7 @@ span.deocration2 {
    text-decoration: overline line-through underline;
 }</code></pre>
 							</div>
-							<h4>Тень текста.</h4>
+							<h4 id="index12">Тень текста.</h4>
 							<p>Свойство <span>text-shadow</span> добавляет тень к тексту.</p>
 							<p>Синтаксис записи значений, для свойства <span>text-shadow</span> таков:</p>
 							<ol>
@@ -241,7 +307,7 @@ span.deocration2 {
    text-shadow: 2px -2px 0px rgba(0, 0, 0, .5);
 }</code></pre>
 							</div>
-							<h4>Управление преобразованием текста элемента в заглавные или прописные символы.</h4>
+							<h4 id="index13">Управление преобразованием текста элемента в заглавные или прописные символы.</h4>
 							<p>Свойство <span>text-transform</span> управляет преобразование текста.</p>
 							<p>Принимает следующие значения: <span>capitalize</span>, <span>lowercase</span>, <span>uppercase</span>.</p>
 							<p>Указав значение <span>capitalize</span> первый символ каждого слова в предложении будет заглавным.</p>
@@ -262,28 +328,28 @@ span.deocration2 {
    text-transform: uppercase;
 }</code></pre>
 							</div>
-							<h4>Отступ первой строки.</h4>
+							<h4 id="index14">Отступ первой строки.</h4>
 							<p>Свойство <span>text-indent</span>, позволяет указать отступ первой строки, что позволяет сделать красную строку.</p>
 							<div class="code">
 <pre><code data-language="css">.indent {
    text-indent: 50px;
 }</code></pre>
 							</div>
-							<h4>Интервал между символами.</h4>
+							<h4 id="index15">Интервал между символами.</h4>
 							<p>Свойство <span>letter-spacing</span> определяет интверал между символами.</p>
 							<div class="code">
 <pre><code data-language="css">.letter-space {
    letter-spacing: 5px;
 }</code></pre>
 							</div>
-							<h4>Интервал между словами.</h4>
+							<h4 id="index16">Интервал между словами.</h4>
 							<p>Свойство <span>word-spacing</span> определяет интервал между словами.</p>
 							<div class="code">
 <pre><code data-language="css">.word-space {
    word-spacing: 10px;
 }</code></pre>
 							</div>
-							<h4>Управление проблеами между словами.</h4>
+							<h4 id="index17">Управление проблеами между словами.</h4>
 							<p>Свойство <span>white-space</span> позволяет управлять проблеами между словами.</p>
 							<p>Принимает два значения: <span>nowrap</span> и <span>normal</span>. Значение <span>normal</span> является значением по умолчанию.</p>
 							<p>Указав значение <span>nowrap</span> будет запрещён перенос строки. Таким образом текст отображается в одну строку.</p>
@@ -292,7 +358,7 @@ span.deocration2 {
    white-space: nowrap;
 }</code></pre>
 							</div>
-							<h4>Межстрочный интервал.</h4>
+							<h4 id="index18">Межстрочный интервал.</h4>
 							<p>Свойство <span>line-height</span> позволяет установить межстрочный интервал текста.</p>
 							<p>Значение можно указывать как в пикселях, так и просто в цифрах.</p>
 							<div class="code">
@@ -307,6 +373,7 @@ span.deocration2 {
 }</code></pre>
 							</div>
 						</div>
+						<img src="../img/end.jpg" class="end">
 				</section>
 			</main>
 		</div>
