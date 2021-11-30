@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../img/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../img/favicon/favicon.png" sizes="128x128">
+<link rel="icon" href="../img/favicon/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
+<title>Урок №5. CSS. Стили шрифта и текста.</title>
+<link rel="stylesheet" href="../css/null.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+<body>
+	<div class="window">
+<aside class="sidebar">
+	<div class="sidebar__header">
+		<div class="sidebar__button"><span></span></div>
+		<div class="sidebar__title">Навигация</div>
+	</div>
+	<div class="sidebar__body">
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Уроки</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста</a></li>
+				<li class="sidebar-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков</a></li>
+			</ul>
+		</div>
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Полезности</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="../creating-project/">Создание проекта</a></li>
+			</ul>
+		</div>
+	</div>
+</aside>		<div class="wrapper">
+<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__box">
+				<h1>Создание проекта</h1>
+			</div>
+			<div class="header__button"><span></span></div>
+			<div class="header-menu">
+				<div class="header-menu__head">
+					<div class="header-menu__title">Навигация</div>
+				</div>
+				<div class="header-menu__body">
+					<div class="header-menu-category">
+						<div class="header-menu-category__head">Уроки</div>
+						<ul class="header-menu-category__list">
+							<li class="header-menu-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста.</a></li>
+							<li class="header-menu-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков.</a></li>
+						</ul>
+					</div>
+					<div class="header-menu-category">
+						<div class="header-menu-category__head">Полезности</div>
+						<ul class="header-menu-category__list">
+							<li class="header-menu-category__item"><a href="../creating-project/">Создание проекта</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>			<main class="page">
+				<section>
+					<aside class="page-nav">
+						<ul class="page-nav__list">
+							<li class="page-nav__item">
+								<a href="#index1" class="page-nav__link active">Введение</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index2" class="page-nav__link">Основная часть</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index3" class="page-nav-inner__link">Создание папки проекта</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index4" class="page-nav-inner__link">Создание структуры файлов и папок</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index5" class="page-nav-inner__link">Создание файлов стилей</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index6" class="page-nav-inner__link">Создание структуры HTML</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</aside>
+					<div class="text">
+						<div class="text__section">
+							<h2 id="index1">Что?</h2>
+							<p>Пособие по тому, как создать файловую структуру проекта.</p>
+						</div>
+						<div class="text__section">
+							<h2 id="index2">Как это сделать</h2>
+							<h4 id="index3">Создание папки проекта</h4>
+							<p>Для начала нам нужно создать папку с проектом.</p>
+							<img class="text__image" src="../img/creating-project/1.gif">
+							<h4 id="index4">Структура файлов и папок</h4>
+							<p>После необходимо создать необходимые папки и файлы для проекта, такие как:</p>
+							<ol>
+								<li>Папку <span>css</span>, для хранения файлов стилей.</li>
+								<li>Папку <span>img</span>, для хранения изображений.</li>
+								<li>Файл <span>index.html</span>, в котором мы будем писать разметку.</li>
+							</ol>
+							<p>Создадим папки <span>css</span> и <span>img</span>.</p>
+							<img src="../img/creating-project/2.gif" class="text__image">
+							<p>Создадим файл <span>index.html</span>, для этого перенесём нашу основную папку <span>Project</span>, в <span>Sublime Text 3</span>.</p>
+							<img src="../img/creating-project/3.gif" class="text__image">
+							<p>После этого, раскроем папку, нажав по ней. После чего нажмём правой кнопком мыши по папке нашего проекта <span>Project</span> и нажмём <span>New File</span>.</p>
+							<p>Затем сохраним наш файл нажав сочетание клавиш <span>Ctrl + S</span>, либо зайдя в меню, выбрав пукнт <span>File</span> и нажав пункт <span>Save</span>.</p>
+							<p>После чего укажем название файла как <span>index.html</span> и нажмём сохранить.</p>
+							<img src="../img/creating-project/4.gif" class="text__image">
+							<h4 id="index5">Создадим файлы стилей</h4>
+							<p>После предыдущих операций необходимо будет создать файл <span>style.css</span>.</p>
+							<p>Для этого следует раскрыть папку <span>css</span> в нашем проекте в <span>Sublime Text 3</span>, нажать правой кнопкой мыши по папке <span>css</span>, выбрать пункт <span>New File</span>, и после чего сохранить файл под названием <span>style.css</span>.</p>
+							<img src="../img/creating-project/5.gif" class="text__image">
+							<p>Так же необходим будет файл с обнуляющими стилями css. Нам следует его найти и перенести в наш проект в папку <span>css</span>.</p>
+							<img src="../img/creating-project/6.gif" class="text__image">
+							<h4 id="index6">Созадние базовой структруы в <span>index.html</span>.</h4>
+							<p>Теперь нам следует создать стандартную структуру в <span>HTML</span> коде.</p>
+							<p>Для этого откроем наш файл <span>index.html</span> в <span>Sublime Text 3</span>, после чего напишем <span>!</span> и нажмём клавишу <span>Tab</span>.</p>
+							<p>Изменим значение атрибута <span>lang</span>, для тега <span>&lt;html&gt;</span> с <span>en</span> на <span>ru</span>, и напишем своё название странцы в теге <span>&lt;title&gt;</span>.</p>
+							<img src="../img/creating-project/7.gif" class="text__image">
+							<p>И окончательным действием к подготовке нашего проекта станет подключение файлов стилей к нашей <span>HTML-странице</span>.</p>
+							<p>Чтобы это сделать нам необходимо создать внутри тега <span>&lt;head&gt;</span>, тег <span>&lt;link&gt;</span>. Для этого созтаточно написать <span>link</span>, после чего нажать на клавишу <span>Tab</span>. Затем в атрибуте <span>href</span>, следует указать путь к нашему файлу стилей.</p>
+							<p>Сначала следует подключить обнуляющий файл стилей, затем файл со стилями, которые мы будем писать.</p>
+							<p>После этого сохраняем файл <span>index.html</span>.</p>
+							<img src="../img/creating-project/8.gif" class="text__image">
+							<p>Всё мы готовы к работе над новым проектом!</p>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+<script src="../js/rainbow.min.js"></script>
+<script src="../js/script.js"></script></body>
+</html>
