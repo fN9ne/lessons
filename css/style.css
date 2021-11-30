@@ -453,6 +453,12 @@ body {
 	color: #f8f8f8;
 	margin: 0 0 35px 0;
 }
+.header-menu-category {
+	margin: 0 0 30px 0;
+}
+.header-menu-category:last-child {
+	margin: 0;
+}
 .header-menu-category__head {
 	color: #f8f8f8;
 	margin: 0 0 20px 0;
