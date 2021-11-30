@@ -216,9 +216,11 @@ body {
 	border-radius: 10px;
 	margin: 0 0 20px 0;
 	max-width: 700px;
+	width: 100%;
 }
 .text__image img {
 	max-width: 100%;
+	width: 100%;
 }
 .text__section {
 	margin: 0 0 40px 0;
