@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../img/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../img/favicon/favicon.png" sizes="128x128">
+<link rel="icon" href="../img/favicon/favicon.ico" sizes="16x16 32x32 64x64 128x128" type="image/vnd.microsoft.icon">
+<title>Урок №7. CSS. Свойства оформления блоков.</title>
+<link rel="stylesheet" href="../css/null.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+<body>
+	<div class="window">
+<aside class="sidebar">
+	<div class="sidebar__header">
+		<div class="sidebar__button"><span></span></div>
+		<div class="sidebar__title">Навигация</div>
+	</div>
+	<div class="sidebar__body">
+		<div class="sidebar-category">
+			<div class="sidebar-category__header"><a href="../home/">Главная</a></div>
+		</div>
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Уроки</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="../1/"><span>Урок 1.</span> Что такое сайты</a></li>
+				<li class="sidebar-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста</a></li>
+				<li class="sidebar-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков</a></li>
+				<li class="sidebar-category__item"><a href="../7/"><span>Урок 7.</span> Оформление блоков</a></li>
+			</ul>
+		</div>
+		<div class="sidebar-category">
+			<div class="sidebar-category__header">Полезности</div>
+			<ul class="sidebar-category__list">
+				<li class="sidebar-category__item"><a href="../creating-project/">Создание проекта</a></li>
+				<li class="sidebar-category__item"><a href="../snippets/">Сокращения</a></li>
+			</ul>
+		</div>
+	</div>
+</aside>		<div class="wrapper">
+<header class="header">
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__box">
+				<div class="header__num">7</div>
+				<h1>Свойства оформления блоков.</h1>
+			</div>
+			<div class="header__button"><span></span></div>
+			<div class="header-menu">
+				<div class="header-menu__head">
+					<div class="header-menu__title">Навигация</div>
+				</div>
+				<div class="header-menu__body">
+					<div class="header-menu-category">
+						<div class="header-menu-category__head"><a href="../home/">Главная</a></div>
+					</div>
+					<div class="header-menu-category">
+						<div class="header-menu-category__head">Уроки</div>
+						<ul class="header-menu-category__list">
+							<li class="header-menu-category__item"><a href="../1/"><span>Урок 1.</span> Что такое сайты</a></li>
+							<li class="header-menu-category__item"><a href="../5/"><span>Урок 5.</span> Стили шрифта и текста</a></li>
+							<li class="header-menu-category__item"><a href="../6/"><span>Урок 6.</span> Свойства блоков</a></li>
+							<li class="header-menu-category__item"><a href="../7/"><span>Урок 7.</span> Оформление блоков</a></li>
+						</ul>
+					</div>
+					<div class="header-menu-category">
+						<div class="header-menu-category__head">Полезности</div>
+						<ul class="header-menu-category__list">
+							<li class="header-menu-category__item"><a href="../creating-project/">Создание проекта</a></li>
+							<li class="header-menu-category__item"><a href="../snippets/">Сокращения</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>			<main class="page">
+				<section>
+					<aside class="page-nav">
+						<ul class="page-nav__list">
+							<li class="page-nav__item">
+								<a href="#index1" class="page-nav__link active">Введение</a>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index2" class="page-nav__link">Основная часть</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index3" class="page-nav-inner__link">Внутренняя граница (border)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index4" class="page-nav-inner__link">Радиус скругления (border-radius)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index5" class="page-nav-inner__link">Внешняя граница (outline)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index6" class="page-nav-inner__link">Тень элемента (box-shadow)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index7" class="page-nav__link">Управление видимостью блока</a>
+								<div class="page-nav-inner">
+									<ul class="page-nav-inner__list">
+										<li class="page-nav-inner__item">
+											<a href="#index8" class="page-nav-inner__link">Непрозрачность (opacity)</a>
+										</li>
+										<li class="page-nav-inner__item">
+											<a href="#index9" class="page-nav-inner__link">Видимость (visibility)</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="page-nav__item">
+								<a href="#index10" class="page-nav__link">Итог</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="text">
+						<div class="text__section">
+							<h2 id="index1">Введение</h2>
+							<p>Мы знакомы с различными способами оформления текста, преобразования и работы с блочными тегами. И поэтому сегодня мы познакомимся с различными свойствами, который позволяют внешне оформлять блоки.</p>
+						</div>
+						<div class="text__section">
+							<h2 id="index2">Основная часть</h2>
+							<h4 id="index3">Граница</h4>
+							<p>Свойства <span>border</span>, позволяет добавить границу вокруг элемента.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   border: 1px solid #000;
+}</code></pre>
+</div>
+							<p>Синтаксис записи для этого свойства прост:</p>
+							<ol>
+								<li>Сначала указывается размер границы в пикселях.</li>
+								<li>Затем указывается тип границы.</li>
+								<li>И напоследок цвет.</li>
+							</ol>
+							<p>С размером и цветом всё понятно, но существует множество различных типов границ, самые основные и чаще всего применяемые на практике это: <span>solid (спрошлая)</span>, <span>dashed (пунктирная)</span>, <span>dotted (точечная)</span>.</p>
+							<div class="example">
+								<div class="example__body" style="display: flex; margin: 0 -10px; font-family: monospace; color: #f8f8f8;">
+									<div class="example__item" style="flex: 0 0 33.3%; padding: 0 10px;"><div style="padding: 20px; height: 100px;border: 5px solid #0177FB;">SOLID (СПЛОШНАЯ)</div></div>
+									<div class="example__item" style="flex: 0 0 33.3%; padding: 0 10px;"><div style="padding: 20px; height: 100px;border: 5px dashed #0177FB; ">DASHED (ПУНКТИРНАЯ)</div></div>
+									<div class="example__item" style="flex: 0 0 33.3%; padding: 0 10px;"><div style="padding: 20px; height: 100px;border: 5px dotted #0177FB; ">DOTTED (ТОЧЕЧНАЯ)</div></div>
+								</div>
+							</div>
+							<p>Так же можно указать границу для какой-то конкретной стороны, для этого использовать свойства:</p>
+							<ul>
+								<li><span>border-top</span> - граница сверху.</li>
+								<li><span>border-right</span> - граница справа.</li>
+								<li><span>border-bottom</span> - граница снизу.</li>
+								<li><span>border-left</span> - граница слева.</li>
+							</ul>
+							<p>Например нам необходимо сделать сплошные границы только сверху и снизу:</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   border-top: 2px solid #0177fb;
+   border-bottom: 2px solid #0177fb;
+}</code></pre>
+</div>
+							<p>Получаем:</p>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px 0; height: 100px; border-top: 2px solid #0177fb; border-bottom: 2px solid #0177fb;">ГРАНИЦА СВЕРХУ<br>И СНИЗУ</div>
+								</div>
+							</div>
+							<p>Так же можно сделать, так чтобы границы не было с какой-то конкретной стороны, для этого следует написать свойство <span>border</span>, указать необходимую ширину границы, тип и цвет, и после чего указать ещё одно свойство стороны границы, которую мы хотим убрать. Пусть это будет <span>border-bottom (нижняя граница)</span>, после чего указать значение <span>none</span>, либо же <span>0</span>:</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   border: 2px solid #0177fb;
+
+   /* отключаем нижнюю границу */
+   border-bottom: none;
+   /* так же можно использовать вариант ниже ↓ */
+   border-bottom: 0;
+}</code></pre>
+</div>
+							<p>Получаем:</p>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border: 2px solid #0177fb; border-bottom: 0;">ГРАНИЦА СНИЗУ ОТСУТСТВУЕТ</div>
+								</div>
+							</div>
+							<h4 id="index4">Радиус скругления границы</h4>
+							<p>Следующим свойством будет <span>border-radius</span>, оно позволяет скруглить границы блока.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   border-radius: 20px;
+   border: 2px solid #0177fb;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border: 2px solid #0177fb; border-radius: 20px;">БЛОК С СКРУГЛЕННЫМИ УГЛАМИ</div>
+								</div>
+							</div>
+							<p>Можно сделать круг, указав значение в <span>50%</span>.</p>
+<div class="code">
+	<pre><code data-language="css">img {
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item"><img style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;" src="../img/endings/5.jpg"></div>
+								</div>
+							</div>
+							<p>Так же можно скруглить границы с каких-либо определённых сторон, на подобии синтаксиса записи для свойств <span>margin</span> и <span>padding</span>.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   border-radius: 20px 50px 10px 0;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border: 2px solid #0177fb; border-radius: 20px 50px 10px 0;">БЛОК С СКРУГЛЕННЫМИ УГЛАМИ</div>
+								</div>
+							</div>
+							<h4 id="index5">Внешняя граница</h4>
+							<p>Свойство схожее с <span>border</span> - <span>outline</span>, добавляет уже внешную граница для блока.</p>
+							<p>Синтаксис записи точно такой же как и у <span>border</span></p>
+							<p>Отличием является то, что <span>outline</span>, устанавливается не внутри блока подвигая содержимое, а на внешую часть блока и разумеется не сдвигает внутреннее содержимое элемента.</p>
+							<p>Помимо этого, в отличие от <span>border</span>, это свойство нельзя указать для какой-то конкретной стороны.</p>
+							<p>Так же для него не будет действовать <span>border-radius</span>.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+	/* устанавливаем внешнюю границу */
+   outline: 4px solid red;
+   /* для наглядности указываем внутреннюю границу*/
+   border: 4px solid #0177fb;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border: 4px solid #0177fb; outline: 4px solid red;">БЛОК С ВНЕШНЕЙ ГРАНИЦЕЙ</div>
+								</div>
+							</div>
+							<h4 id="index6">Тень для блока</h4>
+							<p>Свойство <span>box-shadow</span> позволяет добавить тень к нашему элементу.</p>
+							<p>Синтаксис записи такой же, как у <span>text-shadow</span>.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+   border-radius: 25px;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border-radius: 25px; box-shadow: 0 10px 25px rgba(0, 0, 0, .5);">БЛОК С ТЕНЬЮ</div>
+								</div>
+							</div>
+							<p>Теней можно добавить несколько, указав их через запятую:</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   box-shadow: 0 10px 25px rgba(0, 0, 0, .5),
+               0 -20px 15px rgba(255, 255, 255, .3);
+   border-radius: 25px;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border-radius: 25px; box-shadow: 0 10px 25px rgba(0, 0, 0, .5), 0 -20px 15px rgba(255, 255, 255, .3);">БЛОК С ДВУМЯ РАЗЛИЧНЫМИ ТЕНЯМИ</div>
+								</div>
+							</div>
+							<p>Тем более можно добавить тень внутрь блока, для этого указав значение <span>inset</span> вначале записи значения:</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   box-shadow: inset 0 0 25px rgba(255, 255, 255, .25);
+   border-radius: 25px;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; border-radius: 25px; box-shadow: inset 0 0 25px rgba(255, 255, 255, .1);">БЛОК С ВНУТРЕННЕЙ ТЕНЬЮ</div>
+								</div>
+							</div>
+						</div>
+						<div class="text__section">
+							<h2 id="index7">Управление видимостью блока</h2>
+							<h4 id="index8">Непрозрачность блока</h4>
+							<p>Свойство управляющая непрозрачностью блока - <span>opacity</span>.</p>
+							<p>Значение указывается в десятичной дроби. Где <span>1</span> - это полная непрозрачность, <span>0</span> - полностью прозрачный элемент, и например <span>0.5</span> - половина непрозрачности.</p>
+<div class="code">
+	<pre><code data-language="css">.block {
+   opacity: 0.5;
+   /* внешняя обводка для наглядности */
+   border: 5px solid #fff;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; padding: 20px; height: 100px; opacity: 0.5; border: 5px solid #fff;">ПОЛУПРОЗРАЧНЫЙ БЛОК</div>
+								</div>
+							</div>
+							<p>Важно подметить, что в отличие от <span>display: none</span>, над элемент не убирается из вёрстки и занимает то же место, что и было изначально, и с ним можно до сих пор взаимодействовать (например, кликать по ссылке).</p>
+							<h4 id="index9">Видимость блока</h4>
+							<p>Последнее на сегодня свойство предназначено для того, чтобы отображать или же скрыть блок. Это свойство <span>visibility</span>.</p>
+							<p>У этого свойства так же есть существенные отличия, как от <span>opacity</span>, так и от <span>display: none</span></p>
+							<p>И так, по умолчанию у этого свойства присвоено значение - <span>visible</span>. Соответственно, у него есть противоположное значение - <span>hidden</span>. В этом случае, блок исчезнет.</p>
+							<p>В отличие от <span>display: none</span> место, которое занимал блок никуда не пропадёт. Это отличие является схожестью с <span>opacity: 0</span>, но отличие этого свойства от <span>opacity: 0</span>, так это то, что с этим блоком пропадает возможность взаимодействия.</p>
+						</div>
+						<div class="text__section">
+							<h2 id="index10">Итог</h2>
+							<p>Практически все свойства о которых сегодня шла речь так же применимы и к строчным тегам, за исключением свойства <span>border</span>.</p>
+							<p>Так же исключением является свойство <span>outline</span>, которое впринципе работает, но работает иначе: внешняя граница обтикает наш текст.</p>
+<div class="code">
+	<pre><code data-language="css">span {
+   outline: 2px solid #fff;
+}</code></pre>
+</div>
+							<div class="example">
+								<div class="example__body">
+									<div class="example__item" style="font-family: monospace; color: #f8f8f8; display: inline; outline: 2px solid #fff;">Строчный тег<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ex possimus numquam dignissimos molestias temporibus eveniet placeat assumenda aperiam vel!</div>
+								</div>
+							</div>
+							<p>Так же, к строчным тегам нельзя применить <span>border-radius</span>, так как соответственно нельзя применить свойство <span>border</span>.</p>
+						</div>
+						<img src="../img/endings/5.jpg" class="end">
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+<script src="../js/rainbow.min.js"></script>
+<script src="../js/script.js"></script></body>
+</html>
